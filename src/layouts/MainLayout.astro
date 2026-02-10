@@ -1,0 +1,136 @@
+---
+import Header from '../components/Header.astro';
+const {
+  title = 'Cover Story',
+  description = 'AI-assisted resume and cover letter builder.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header />
+    <main class="container page">
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style>
+  :global(:root) {
+    color-scheme: light;
+  }
+
+  :global(body) {
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: #f7f7f9;
+    color: #121417;
+  }
+
+  :global(.container) {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  :global(.page) {
+    padding: 32px 0 64px;
+  }
+
+  :global(.site-header) {
+    background: white;
+    border-bottom: 1px solid #e8e8ee;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  :global(.site-header .container) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+  }
+
+  :global(.logo) {
+    font-weight: 700;
+    text-decoration: none;
+    color: #121417;
+  }
+
+  :global(.nav) {
+    display: flex;
+    gap: 16px;
+  }
+
+  :global(.nav-link) {
+    font-size: 14px;
+    text-decoration: none;
+    color: #4c5564;
+  }
+
+  :global(.nav-link:hover) {
+    color: #121417;
+  }
+
+  :global(.card) {
+    background: white;
+    border: 1px solid #e8e8ee;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  }
+
+  :global(.stack) {
+    display: grid;
+    gap: 16px;
+  }
+
+  :global(.btn) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: none;
+    background: #111827;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  :global(.btn.secondary) {
+    background: white;
+    color: #111827;
+    border: 1px solid #e8e8ee;
+  }
+
+  :global(.input),
+  :global(.textarea),
+  :global(.select) {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid #d6d9e0;
+    font-size: 14px;
+  }
+
+  :global(.muted) {
+    color: #6b7280;
+    font-size: 13px;
+  }
+
+  :global(.grid-two) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+</style>

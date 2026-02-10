@@ -1,0 +1,26 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import PromptForm from '../islands/PromptForm';
+import ResumePreview from '../islands/ResumePreview';
+import PdfExportButton from '../islands/PdfExportButton';
+---
+
+<MainLayout title="Generate | Cover Story" description="Generate a resume draft with Cover Story.">
+  <section class="stack">
+    <div class="stack">
+      <h1>Generate a resume draft</h1>
+      <p class="muted">
+        Use the prompt form to generate a markdown draft, then edit and export.
+      </p>
+    </div>
+
+    <div class="grid-two">
+      <PromptForm client:load />
+      <ResumePreview client:load />
+    </div>
+
+    <div class="stack">
+      <PdfExportButton client:load />
+    </div>
+  </section>
+</MainLayout>

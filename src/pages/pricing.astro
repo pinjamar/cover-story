@@ -1,0 +1,35 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Pricing | Cover Story" description="Pricing for Cover Story.">
+  <section class="stack">
+    <h1>Pricing</h1>
+    <p class="muted">Choose a plan that matches your job hunt.</p>
+
+    <div class="grid-two">
+      <div class="card stack">
+        <h2>Starter</h2>
+        <p class="muted">Perfect for one-off resume refreshes.</p>
+        <p><strong>$9</strong> per resume</p>
+        <ul>
+          <li>Prompt-based draft</li>
+          <li>Markdown editor</li>
+          <li>PDF export</li>
+        </ul>
+        <button class="btn">Get started</button>
+      </div>
+      <div class="card stack">
+        <h2>Pro</h2>
+        <p class="muted">For career switchers and power applicants.</p>
+        <p><strong>$19</strong> per month</p>
+        <ul>
+          <li>Unlimited drafts</li>
+          <li>Custom tone templates</li>
+          <li>Priority support</li>
+        </ul>
+        <button class="btn">Start trial</button>
+      </div>
+    </div>
+  </section>
+</MainLayout>
