@@ -1,0 +1,2 @@
+-- Seed data for Cover Story application
+-- Add your seed data here
